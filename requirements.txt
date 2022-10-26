@@ -1,0 +1,4 @@
+apt-get install aircrack-ng
+apt-get install wifite
+apt-get install airodump-ng
+apt-get update && apt-get upgrade -y
