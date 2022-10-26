@@ -34,12 +34,31 @@ if a == 1:
 
    print(s2)
 
-   print(["airodump-ng",interface])
+   print(["airodump-ng",interface],shell=True)
 
-   ex1 = subprocess.call(["exit", "ctrl^C"])
+   ex1 = subprocess.call(["exit", "ctrl^C"],shell=True)
 
    print(ex1)
 
    print("Enter Bssid of The Network To Hack The Wifi Password")
 
    s3 = subprocess.call([])
+   
+elif a == 2:
+   print("Programming code for Wifi Hacking Second Method")
+   
+   d1 = subprocess.call(["sudo","su"],shell=True)
+   
+   print(d1)
+   
+   passwd = input("Enter Password For Root access:-")
+   d2 = subprocess.call([passwd],shell=True)
+   print(d2)
+   d3 = subprocess.call([wifite],shell=True)
+   print(d3)
+   print("Press Ctrl^C To stop The Scanning For The wifi Networks.")
+   d4 = int(input("ENter Number To select The Network:-"))
+   d5 = subprocess.call([d4],shell=True)   
+   
+else:
+   break
